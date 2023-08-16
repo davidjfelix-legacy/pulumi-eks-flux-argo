@@ -336,7 +336,7 @@ packages:
       js-yaml: 3.14.1
       minimist: 1.2.8
       normalize-package-data: 2.5.0
-      protobufjs: 6.11.3
+      protobufjs: 6.11.4
       read-package-tree: 5.3.1
       require-from-string: 2.0.2
       semver: 6.3.1
@@ -1299,8 +1299,8 @@ packages:
       find-up: 6.3.0
     dev: false
 
-  /protobufjs@6.11.3:
-    resolution: {integrity: sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==}
+  /protobufjs@6.11.4:
+    resolution: {integrity: sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==}
     hasBin: true
     requiresBuild: true
     dependencies:
