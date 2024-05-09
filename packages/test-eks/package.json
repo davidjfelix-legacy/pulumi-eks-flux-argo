@@ -2,12 +2,13 @@
     "name": "test-eks",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "^18.18.5"
+        "@types/node": "^20.12.11"
     },
     "dependencies": {
-        "@pulumi/aws": "^5.42.0",
-        "@pulumi/awsx": "^1.0.6",
-        "@pulumi/eks": "^1.0.3",
-        "@pulumi/pulumi": "^3.88.1"
-    }
+        "@pulumi/aws": "^6.34.0",
+        "@pulumi/awsx": "^2.9.0",
+        "@pulumi/eks": "^2.3.0",
+        "@pulumi/pulumi": "^3.115.2"
+    },
+    "packageManager": "pnpm@9.1.0"
 }

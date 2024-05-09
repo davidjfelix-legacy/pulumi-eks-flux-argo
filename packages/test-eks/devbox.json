@@ -1,0 +1,13 @@
+{
+  "packages": [
+    "nodejs@latest",
+    "pulumi@latest"
+  ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true"
+  },
+  "shell": {
+    "init_hook": [],
+    "scripts":   {}
+  }
+}
