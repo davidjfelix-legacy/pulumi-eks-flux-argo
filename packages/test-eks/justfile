@@ -1,0 +1,6 @@
+# Default recipe, run on `just`
+_default:
+  just --list
+
+deploy:
+  pulumi up
