@@ -6,3 +6,6 @@ _default:
 # Bootstrap
 bootstrap:
   just packages/test-eks/deploy
+
+teardown:
+  just packages/test-eks/undeploy

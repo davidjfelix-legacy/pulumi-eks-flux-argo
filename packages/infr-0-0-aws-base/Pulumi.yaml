@@ -1,0 +1,7 @@
+name: infr-0-aws-base
+runtime: nodejs
+description: Base AWS Resources
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

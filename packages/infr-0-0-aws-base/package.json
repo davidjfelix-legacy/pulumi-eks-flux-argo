@@ -1,0 +1,16 @@
+{
+  "name": "@nullserve/infr-0-0-aws-base",
+  "version": "2024.05.1",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/node": "^18",
+    "prettier": "3.2.5",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.0.0",
+    "@pulumi/awsx": "^2.0.2",
+    "@pulumi/pulumi": "^3.113.0"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

@@ -1,12 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.6/.schema/devbox.schema.json",
-  "packages": [
-    "just@latest",
-    "kubectl@latest",
-    "fluxcd@latest"
-  ],
+  "packages": ["just@latest", "kubectl@latest", "fluxcd@latest", "nodejs@22", "pulumi-bin@latest", "argocd@latest"],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true"
+  },
   "shell": {
     "init_hook": [],
-    "scripts":   {}
+    "scripts": {}
   }
 }
