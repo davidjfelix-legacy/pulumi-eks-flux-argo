@@ -6,10 +6,10 @@ _default:
 # Bootstrap
 bootstrap:
   # Deploy AWS Resources
-  just packages/infr-0-0-aws-base/deploy
+  just packages/infr-aws-base/deploy
   just packages/test-eks/deploy
 
 teardown:
   just packages/test-eks/undeploy
   # Remove AWS Resources
-  just packages/infr-0-0-aws-base/undeploy
+  just packages/infr-aws-base/undeploy

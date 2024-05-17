@@ -1,14 +1,14 @@
 config:
-  infr-0-0-aws-base:data:
+  infr-aws-base:data:
     isLocal: false
     tags:
-      Application: "infr-0-0-aws-base"
+      Application: "infr-aws-base"
       CostCenter: "NullServe Core"
       Environment: "main"
       IsCloudFormation: "False"
       IsManual: "False"
       IsPulumi: "True"
       IsTerraform: "False"
-      Project: "nullserve/infrastructure/packages/infr-0-0-aws-base"
+      Project: "nullserve/infrastructure/packages/infr-aws-base"
       Repository: "https://github.com/nullserve/infrastructure.git"
   aws:region: "us-east-2"

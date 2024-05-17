@@ -1,0 +1,9 @@
+version = 1
+[pkgs.infr-bootstrap]
+deps = []
+
+[pkgs.infr-aws-base]
+deps = ["infr-bootstrap"]
+
+[pkgs.infr-test-eks]
+deps = ["infr-aws-base"]

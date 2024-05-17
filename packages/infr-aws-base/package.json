@@ -1,5 +1,5 @@
 {
-  "name": "@nullserve/infr-0-0-aws-base",
+  "name": "@nullserve/infr-aws-base",
   "version": "2024.05.1",
   "main": "src/index.ts",
   "devDependencies": {
