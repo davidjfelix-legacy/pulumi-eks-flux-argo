@@ -1,3 +1,4 @@
+import * as aws from '@pulumi/aws'
 import * as pulumi from '@pulumi/pulumi'
 
 export interface IConfig {
@@ -7,3 +8,12 @@ export interface IConfig {
 }
 
 export const {awsBaseStackName, isLocal, tags} = new pulumi.Config().requireObject<IConfig>('data')
+
+export const awsBaseStack = new pulumi.StackReference(awsBaseStackName)
+export const vpc = awsBaseStack.getOutput('vpc') as pulumi.Output<aws.ec2.Vpc>
+export const vpcId = awsBaseStack.getOutput('vpcId') as pulumi.Output<string>
+
+const current = aws.getCallerIdentity({})
+export const accountId = current.then((current) => current.accountId)
+export const callerArn = current.then((current) => current.arn)
+export const callerUser = current.then((current) => current.userId)

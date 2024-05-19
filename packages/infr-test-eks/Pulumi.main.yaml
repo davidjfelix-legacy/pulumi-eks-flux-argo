@@ -1,5 +1,6 @@
 config:
   infr-aws-base:data:
+    awsBaseStackName: "DavidJFelix/infr-aws-base/main"
     isLocal: false
     tags:
       Application: "infr-test-eks"
@@ -12,4 +13,3 @@ config:
       Project: "nullserve/infrastructure/packages/infr-test-eks"
       Repository: "https://github.com/nullserve/infrastructure.git"
   aws:region: "us-east-2"
-  
