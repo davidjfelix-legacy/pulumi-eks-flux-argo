@@ -1,0 +1,15 @@
+config:
+  infr-aws-base:data:
+    isLocal: false
+    tags:
+      Application: "infr-test-eks"
+      CostCenter: "NullServe Test EKS"
+      Environment: "main"
+      IsCloudFormation: "False"
+      IsManual: "False"
+      IsPulumi: "True"
+      IsTerraform: "False"
+      Project: "nullserve/infrastructure/packages/infr-test-eks"
+      Repository: "https://github.com/nullserve/infrastructure.git"
+  aws:region: "us-east-2"
+  
