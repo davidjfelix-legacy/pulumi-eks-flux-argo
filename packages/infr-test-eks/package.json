@@ -1,6 +1,6 @@
 {
   "name": "@nullserve/infr-test-eks",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "devDependencies": {
     "@types/node": "^20.12.11",
     "prettier": "^3.2.5"

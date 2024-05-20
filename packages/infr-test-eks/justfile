@@ -2,8 +2,17 @@
 _default:
   just --list
 
-deploy:
-  pulumi up
+# Use Pulumi to deploy. Pass -y to automatically deploy
+deploy *ARGS:
+  pulumi up --stack main {{ARGS}}
 
-undeploy:
-  pulumi down
+# Pass CI specific args to deploy
+deploy-ci:
+  @just deploy -y
+
+# Use Pulumi to destroy. Pass -y to automatically deploy
+undeploy *ARGS:
+  pulumi down --stack main {{ARGS}}
+
+undeploy-ci:
+  @just undeploy -y

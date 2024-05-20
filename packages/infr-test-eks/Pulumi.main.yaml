@@ -1,5 +1,5 @@
 config:
-  infr-aws-base:data:
+  infr-test-eks:data:
     awsBaseStackName: "DavidJFelix/infr-aws-base/main"
     isLocal: false
     tags:

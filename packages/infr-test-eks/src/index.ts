@@ -1,8 +1,8 @@
 import * as eks from '@pulumi/eks'
-import {vpcId} from './config'
+import {privateSubnetIds, publicSubnetIds, tags, vpcId} from './config'
 
 // Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster('cluster', {vpcId})
+const cluster = new eks.Cluster('cluster', {vpcId, privateSubnetIds, publicSubnetIds, tags})
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig
