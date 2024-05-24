@@ -1,2 +1,2 @@
 // Used by infr-test-eks
-export {vpc} from './net/vpc'
+export {kubeconfig} from './k8s/eks'

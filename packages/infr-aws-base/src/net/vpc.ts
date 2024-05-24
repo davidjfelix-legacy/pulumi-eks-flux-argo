@@ -15,7 +15,7 @@ export const vpc = azs.apply(
       subnetSpecs: [
         {cidrMask: 22, name: 'public', type: ec2x.SubnetType.Public},
         {cidrMask: 22, name: 'private', type: ec2x.SubnetType.Private},
-        {cidrMask: 22, name: 'internal', type: ec2x.SubnetType.Isolated},
+        {cidrMask: 22, name: 'isolated', type: ec2x.SubnetType.Isolated},
       ],
     }),
 )
