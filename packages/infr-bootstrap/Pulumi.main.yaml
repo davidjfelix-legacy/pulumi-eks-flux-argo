@@ -1,0 +1,18 @@
+config:
+  aws:region: "us-east-2"
+  github:owner: nullserve
+  github:token:
+    secure: AAABAE5YFlCN1LQ3zrD7nmA5smcuEsgYko6gyjTKN0Su80vz+Kd/XrHMkImexZ7KMaDYb9GfmOnuC1A+Ezwt49j2RGrFxMfW
+  infr-bootstrap:data:
+    githubRepo: 'infrastructure'
+    isLocal: false
+    tags:
+      Application: "infr-bootstrap"
+      CostCenter: "NullServe Core"
+      Environment: "main"
+      IsCloudFormation: "False"
+      IsManual: "False"
+      IsPulumi: "True"
+      IsTerraform: "False"
+      Project: "nullserve/infrastructure/packages/infr-bootstrap"
+      Repository: "https://github.com/nullserve/infrastructure.git"

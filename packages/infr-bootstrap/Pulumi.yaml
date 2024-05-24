@@ -1,0 +1,7 @@
+name: infr-bootstrap
+runtime: nodejs
+description: Bootstrap for infrastructure -- create necessary keys, users, accounts, etc.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
