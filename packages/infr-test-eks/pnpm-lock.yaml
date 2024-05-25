@@ -17,9 +17,6 @@ importers:
       '@pulumi/eks':
         specifier: ^2.5.0
         version: 2.5.0(@types/node@20.12.12)(encoding@0.1.13)(typescript@5.4.5)
-      '@pulumi/github':
-        specifier: ^6.2.1
-        version: 6.2.1(typescript@5.4.5)
       '@pulumi/pulumi':
         specifier: ^3.116.1
         version: 3.116.1(typescript@5.4.5)
@@ -628,9 +625,6 @@ packages:
 
   '@pulumi/eks@2.5.0':
     resolution: {integrity: sha512-d+rjLjMV5JZM7NjPtRnh73FaYXTO/pjwuaUvPOSa9ohjXOzvacJVdO64ffdYbrFRh6+1JQMRQLhZ/JNdh/XaKg==}
-
-  '@pulumi/github@6.2.1':
-    resolution: {integrity: sha512-FdKQm/vzZZ/fSa7BazV8Mwb2qBBkVi0XEGu6Ya8VxBFXCvWzljZz3dBMToNy8mOaPfl5eooyF3YgUohYGGwJbw==}
 
   '@pulumi/kubernetes@4.12.0':
     resolution: {integrity: sha512-P6a8jXYhr+YsyPFjUQaEh/6C0d6f7+TZv8/kiRHhLy2CDke9xAeuBXaHp/bw8EOOcLcibavPn97YKSt6YXeqDQ==}
@@ -3657,15 +3651,6 @@ snapshots:
       - bluebird
       - encoding
       - node-notifier
-      - supports-color
-      - ts-node
-      - typescript
-
-  '@pulumi/github@6.2.1(typescript@5.4.5)':
-    dependencies:
-      '@pulumi/pulumi': 3.116.1(typescript@5.4.5)
-    transitivePeerDependencies:
-      - bluebird
       - supports-color
       - ts-node
       - typescript

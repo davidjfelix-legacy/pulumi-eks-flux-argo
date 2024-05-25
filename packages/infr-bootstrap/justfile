@@ -3,6 +3,11 @@
 _default:
   just --list
 
+# FIX<E: this needs more interactivity
+bootstrap:
+  @echo 'create a github token for the pulumi config'
+  @echo 'create an aws credentials'
+
 # Use Pulumi to deploy. Pass -y to automatically deploy
 deploy *ARGS:
   pulumi up --stack main {{ARGS}}

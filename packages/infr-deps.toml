@@ -6,4 +6,4 @@ deps = []
 deps = ["infr-bootstrap"]
 
 [pkgs.infr-test-eks]
-deps = ["infr-aws-base"]
+deps = ["infr-bootstrap", "infr-aws-base"]
