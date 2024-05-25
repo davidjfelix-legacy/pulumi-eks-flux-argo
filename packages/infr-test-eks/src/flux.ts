@@ -3,7 +3,7 @@ import {fluxcdKey} from './config'
 
 export const provider = new flux.Provider('flux', {
   kubernetes: {
-    configPath: '../dist/.kube/config',
+    configPath: '../out/.kube/config',
   },
   git: {
     url: `ssh://git@github.com/nullserve/infrastructure.git`,

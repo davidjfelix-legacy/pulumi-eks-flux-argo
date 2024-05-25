@@ -3,11 +3,17 @@
 _default:
   just --list
 
-# Bootstrap
+# FIXME: need to repair this a bit -- Bootstrap
 bootstrap:
   # Deploy AWS Resources
   just packages/infr-aws-base/deploy
-  just packages/test-eks/deploy
+  just packages/infr-test-eks/deploy
+
+deploy:
+  just packages/infr-bootstrap/deploy
+  just packages/infr-aws-base/deploy
+  cp packages/infr-aws-base/out/.kube/config packages/infr-test-eks/out/.kube/config
+  just packages/infr-test-eks
 
 teardown:
   just packages/test-eks/undeploy

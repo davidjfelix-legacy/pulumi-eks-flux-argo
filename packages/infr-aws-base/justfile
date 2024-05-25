@@ -6,6 +6,8 @@ _default:
 # Use Pulumi to deploy. Pass -y to automatically deploy
 deploy *ARGS:
   pulumi up --stack main {{ARGS}}
+  mkdir -p out/.kube
+  pulumi stack output kubeconfig > out/.kube/config
 
 # Pass CI specific args to deploy
 deploy-ci:

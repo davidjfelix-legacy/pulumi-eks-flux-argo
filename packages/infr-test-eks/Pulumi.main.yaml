@@ -1,6 +1,7 @@
 config:
   infr-test-eks:data:
     awsBaseStackName: "DavidJFelix/infr-aws-base/main"
+    bootstrapStackName: "DavidJFelix/infr-bootstrap/main"
     isLocal: false
     tags:
       Application: "infr-test-eks"
