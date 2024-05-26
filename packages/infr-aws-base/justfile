@@ -4,18 +4,18 @@ _default:
   just --list
 
 # Use Pulumi to deploy. Pass -y to automatically deploy
-deploy *ARGS:
-  pulumi up --stack main {{ARGS}}
+deploy stack="main" ci="":
+  pulumi up --stack {{stack}} {{ci}}
   mkdir -p out/.kube
-  pulumi stack --stack main output kubeconfig > out/.kube/config
+  pulumi stack --stack {{stack}} output kubeconfig > out/.kube/config
 
 # Pass CI specific args to deploy
-deploy-ci:
-  @just deploy -y
+deploy-ci stack="main":
+  @just _deploy {{stack}} -y
 
 # Use Pulumi to destroy. Pass -y to automatically deploy
-undeploy *ARGS:
-  pulumi down --stack main {{ARGS}}
+undeploy stack *args:
+  pulumi down --stack {{stack}} {{args}}
 
-undeploy-ci:
-  @just undeploy -y
+undeploy-ci stack="main":
+  @just undeploy {{stack}} -y

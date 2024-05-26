@@ -331,8 +331,8 @@
       }
     },
     "pulumi-bin@latest": {
-      "last_modified": "2024-05-18T01:49:49Z",
-      "resolved": "github:NixOS/nixpkgs/63d3e5d82edf5a138e7d0872231cc23ed4e740fd#pulumi-bin",
+      "last_modified": "2024-05-22T06:18:38Z",
+      "resolved": "github:NixOS/nixpkgs/3f316d2a50699a78afe5e77ca486ad553169061e#pulumi-bin",
       "source": "devbox-search",
       "version": "3.116.1",
       "systems": {
@@ -340,41 +340,41 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/nnbh5qfhcpfrvbvpr3x0bsfvzdj39dpc-pulumi-3.116.1",
+              "path": "/nix/store/kcyqxw15mxd4accfc6m6614qmw3bgjbj-pulumi-3.116.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/nnbh5qfhcpfrvbvpr3x0bsfvzdj39dpc-pulumi-3.116.1"
+          "store_path": "/nix/store/kcyqxw15mxd4accfc6m6614qmw3bgjbj-pulumi-3.116.1"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/82mx9xaj8cpqf5lfkasrza1zbg8b7fwk-pulumi-3.116.1",
+              "path": "/nix/store/r3ln2b37zbiid1jd29nxwrvicbcy7shd-pulumi-3.116.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/82mx9xaj8cpqf5lfkasrza1zbg8b7fwk-pulumi-3.116.1"
+          "store_path": "/nix/store/r3ln2b37zbiid1jd29nxwrvicbcy7shd-pulumi-3.116.1"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/204xw74d17qyx799s1pnr8ad1b89ly1r-pulumi-3.116.1",
+              "path": "/nix/store/vwfky7ccmwsyd53k40hw9k6gyrxssprj-pulumi-3.116.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/204xw74d17qyx799s1pnr8ad1b89ly1r-pulumi-3.116.1"
+          "store_path": "/nix/store/vwfky7ccmwsyd53k40hw9k6gyrxssprj-pulumi-3.116.1"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/3n8l6b452aq7wgpsjnhgcv5l3hafkrih-pulumi-3.116.1",
+              "path": "/nix/store/w2gass6k96l20i5qf1paav1qckrm8j0n-pulumi-3.116.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/3n8l6b452aq7wgpsjnhgcv5l3hafkrih-pulumi-3.116.1"
+          "store_path": "/nix/store/w2gass6k96l20i5qf1paav1qckrm8j0n-pulumi-3.116.1"
         }
       }
     }

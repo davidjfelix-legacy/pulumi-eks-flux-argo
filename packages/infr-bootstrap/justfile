@@ -1,12 +1,14 @@
 
 # Default recipe, run on `just`
-_default:
+[private]
+default:
   just --list
 
-# FIX<E: this needs more interactivity
+# FIXME: this needs more interactivity
 bootstrap:
-  @echo 'create a github token for the pulumi config'
-  @echo 'create an aws credentials'
+  #!/usr/bin/env -S bash -euxo pipefail
+  read -p "FIXME: prompt: " prompt
+  echo ${prompt}
 
 # Use Pulumi to deploy. Pass -y to automatically deploy
 deploy *ARGS:
