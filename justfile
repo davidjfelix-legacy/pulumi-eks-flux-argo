@@ -17,10 +17,11 @@ deploy:
   cp packages/infr-bootstrap/out/.ssh/id_rsa out/.ssh/id_rsa
   cp packages/infr-aws-base/out/.kube/config out/.kube/config
   flux bootstrap git \
-  --url=ssh://git@github.com/nullserve/infrastructure \
-  --branch=main \
-  --private-key-file=./out/.ssh/id_rsa \
-  --path=clusters/test-eks
+    --url=ssh://git@github.com/nullserve/infrastructure \
+    --branch=main \
+    --private-key-file=./out/.ssh/id_rsa \
+    --kubeconfig=./out/.kube/config \
+    --path=clusters/test-eks
 
 [confirm("!!!
 DANGER: THIS IS VERY DESTRUCTIVE!
