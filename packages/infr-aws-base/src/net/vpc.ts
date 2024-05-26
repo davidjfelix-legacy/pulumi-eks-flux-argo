@@ -12,6 +12,7 @@ export const vpc = azs.apply(
     new ec2x.Vpc('main', {
       natGateways,
       numberOfAvailabilityZones: azs.zoneIds.length,
+      subnetStrategy: 'Auto',
       subnetSpecs: [
         {cidrMask: 22, name: 'public', type: ec2x.SubnetType.Public},
         {cidrMask: 22, name: 'private', type: ec2x.SubnetType.Private},
