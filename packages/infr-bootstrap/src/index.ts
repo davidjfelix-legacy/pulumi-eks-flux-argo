@@ -4,7 +4,7 @@ import {githubRepo} from './config'
 
 export const fluxcdKey = new tls.PrivateKey('key', {
   algorithm: 'ECDSA',
-  ecdsaCurve: 'P256',
+  ecdsaCurve: 'P384',
 })
 
 export const fluxcdDeployKey = new github.RepositoryDeployKey('fluxcd', {
@@ -13,3 +13,5 @@ export const fluxcdDeployKey = new github.RepositoryDeployKey('fluxcd', {
   key: fluxcdKey.publicKeyOpenssh,
   readOnly: false,
 })
+
+export const fluxcdPrivateKey = fluxcdKey.privateKeyOpenssh

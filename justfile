@@ -9,12 +9,18 @@ bootstrap:
   # Deploy AWS Resources
   just packages/infr-bootstrap/deploy
 
-deploy: bootstrap
+deploy:
   just packages/infr-bootstrap/deploy
   just packages/infr-aws-base/deploy
-  mkdir -p packages/infr-test-eks/out/.kube
-  cp packages/infr-aws-base/out/.kube/config packages/infr-test-eks/out/.kube/config
-  just packages/infr-test-eks/deploy
+  mkdir -p out/.ssh
+  mkdir -p out/.kube
+  cp packages/infr-bootstrap/out/.ssh/id_rsa out/.ssh/id_rsa
+  cp packages/infr-aws-base/out/.kube/config out/.kube/config
+  flux bootstrap git \
+  --url=ssh://git@github.com/nullserve/infrastructure \
+  --branch=main \
+  --private-key-file=./out/.ssh/id_rsa \
+  --path=clusters/test-eks
 
 [confirm("!!!
 DANGER: THIS IS VERY DESTRUCTIVE!

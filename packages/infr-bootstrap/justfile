@@ -13,6 +13,9 @@ bootstrap:
 # Use Pulumi to deploy. Pass -y to automatically deploy
 deploy *ARGS:
   pulumi up --stack main {{ARGS}}
+  mkdir -p out/.ssh/
+  pulumi stack --show-secrets --stack main output fluxcdPrivateKey > out/.ssh/id_rsa
+
 
 # Pass CI specific args to deploy
 deploy-ci:
