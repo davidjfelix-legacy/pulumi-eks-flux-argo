@@ -1,5 +1,6 @@
 import {getAvailabilityZonesOutput} from '@pulumi/aws'
 import {ec2 as ec2x, types} from '@pulumi/awsx'
+import {tags} from '../config'
 
 const azs = getAvailabilityZonesOutput({state: 'available'})
 
@@ -18,5 +19,6 @@ export const vpc = azs.apply(
         {cidrMask: 22, name: 'private', type: ec2x.SubnetType.Private},
         {cidrMask: 22, name: 'isolated', type: ec2x.SubnetType.Isolated},
       ],
+      tags,
     }),
 )
