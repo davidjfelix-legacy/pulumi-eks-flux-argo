@@ -14,4 +14,5 @@ export const fluxcdDeployKey = new github.RepositoryDeployKey('fluxcd', {
   readOnly: false,
 })
 
-export const fluxcdPrivateKey = fluxcdKey.privateKeyOpenssh
+export const fluxcdPrivateKeyOpenssh = fluxcdKey.privateKeyOpenssh
+export const fluxcdPrivateKeyPem = fluxcdKey.privateKeyPem

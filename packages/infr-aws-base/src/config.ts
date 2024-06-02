@@ -1,12 +1,12 @@
 import * as aws from '@pulumi/aws'
 import * as pulumi from '@pulumi/pulumi'
 
-export interface IConfig {
+export interface Config {
   isLocal?: boolean
   tags: Record<string, string>
 }
 
-export const {isLocal, tags} = new pulumi.Config().requireObject<IConfig>('data')
+export const {isLocal, tags} = new pulumi.Config().requireObject<Config>('data')
 
 const current = aws.getCallerIdentity({})
 export const accountId = current.then((current) => current.accountId)
