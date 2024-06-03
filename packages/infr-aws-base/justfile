@@ -3,8 +3,12 @@
 _default:
   just --list
 
+# Remove output artifacts
+clean:
+  rm -rf out
+
 # Use Pulumi to deploy. Pass -y to automatically deploy
-deploy stack="main" ci="":
+deploy stack="main" ci="": clean
   pulumi up --stack {{stack}} {{ci}}
   mkdir -p out/.kube
   pulumi stack --stack {{stack}} output kubeconfig > out/.kube/config

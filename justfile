@@ -16,12 +16,25 @@ deploy:
   mkdir -p out/.kube
   cp packages/infr-bootstrap/out/.ssh/id_rsa out/.ssh/id_rsa
   cp packages/infr-aws-base/out/.kube/config out/.kube/config
+  mkdir -p packages/infr-test-eks/out/.kube
+  cp out/.kube/config packages/infr-test-eks/out/.kube/config
+  just packages/infr-test-eks/deploy
+
+_ugh:
+  # GITHUB_TOKEN=xxx
+  # --owner=nullserve
+  # --repository=infrastructure
   flux bootstrap git \
-    --url=ssh://git@github.com/nullserve/infrastructure \
+    --private-key-file=out/.ssh/id_rsa \
+    --url=ssh://git@github.com/nullserve/infrastructure.git \
     --branch=main \
-    --private-key-file=./out/.ssh/id_rsa \
     --kubeconfig=./out/.kube/config \
     --path=clusters/test-eks
+
+
+_cleanup:
+  just packages/infra-test-eks/undeploy
+  just packages/infra-aws-base/undeploy
 
 [confirm("!!!
 DANGER: THIS IS VERY DESTRUCTIVE!

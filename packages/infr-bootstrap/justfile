@@ -10,11 +10,15 @@ bootstrap:
   read -p "FIXME: prompt: " prompt
   echo ${prompt}
 
+# Remove output artifacts
+clean:
+  rm -rf out
+
 # Use Pulumi to deploy. Pass -y to automatically deploy
-deploy *ARGS:
+deploy *ARGS: clean
   pulumi up --stack main {{ARGS}}
   mkdir -p out/.ssh/
-  pulumi stack --show-secrets --stack main output fluxcdPrivateKey > out/.ssh/id_rsa
+  pulumi stack --show-secrets --stack main output fluxcdPrivateKeyOpenssh > out/.ssh/id_rsa
 
 
 # Pass CI specific args to deploy
