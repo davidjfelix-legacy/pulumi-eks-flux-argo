@@ -33,8 +33,8 @@ _ugh:
 
 
 _cleanup:
-  just packages/infra-test-eks/undeploy
-  just packages/infra-aws-base/undeploy
+  just packages/infr-test-eks/undeploy
+  just packages/infr-aws-base/undeploy main
 
 [confirm("!!!
 DANGER: THIS IS VERY DESTRUCTIVE!

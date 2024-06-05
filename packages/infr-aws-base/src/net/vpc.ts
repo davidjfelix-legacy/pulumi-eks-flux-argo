@@ -5,7 +5,7 @@ import {tags} from '../config'
 const azs = getAvailabilityZonesOutput({state: 'available'})
 
 const natGateways: types.input.ec2.NatGatewayConfigurationArgs = {
-  strategy: ec2x.NatGatewayStrategy.None,
+  strategy: ec2x.NatGatewayStrategy.OnePerAz,
 }
 
 export const vpc = azs.apply(

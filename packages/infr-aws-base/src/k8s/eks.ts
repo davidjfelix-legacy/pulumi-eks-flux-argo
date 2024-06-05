@@ -5,10 +5,12 @@ import {vpc} from '../net/vpc'
 const {vpcId, privateSubnetIds, publicSubnetIds} = vpc
 
 // Create an EKS cluster with the default configuration.
-export const cluster = new eks.Cluster('vpc-cluster', {
-  // vpcId,
-  // privateSubnetIds,
-  // publicSubnetIds,
+export const cluster = new eks.Cluster('cluster', {
+  vpcId,
+  privateSubnetIds,
+  publicSubnetIds,
+  userMappings: [
+  ],
   tags,
 })
 
