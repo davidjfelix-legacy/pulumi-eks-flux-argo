@@ -20,6 +20,12 @@ importers:
       '@pulumi/pulumi':
         specifier: ^3.113.0
         version: 3.115.2(typescript@5.4.5)
+      '@pulumi/tls':
+        specifier: ^5.0.3
+        version: 5.0.3(typescript@5.4.5)
+      '@worawat/flux':
+        specifier: ^1.0.1
+        version: 1.0.1(typescript@5.4.5)
     devDependencies:
       '@types/node':
         specifier: ^18
@@ -641,6 +647,9 @@ packages:
   '@pulumi/query@0.3.0':
     resolution: {integrity: sha512-xfo+yLRM2zVjVEA4p23IjQWzyWl1ZhWOGobsBqRpIarzLvwNH/RAGaoehdxlhx4X92302DrpdIFgTICMN4P38w==}
 
+  '@pulumi/tls@5.0.3':
+    resolution: {integrity: sha512-29NyJnkIDqftK4wA5V5zu/KSkiYXeSEXOgqoaxz37V8Lw8E29iww4fSogjIV5gDJ1pe6/2Q67pmE4BLB6U1qjA==}
+
   '@sigstore/bundle@2.3.1':
     resolution: {integrity: sha512-eqV17lO3EIFqCWK3969Rz+J8MYrRZKw9IBHpSo6DEcEX2c+uzDFOgHE9f2MnyDpfs48LFO4hXmk9KhQ74JzU1g==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -911,6 +920,9 @@ packages:
 
   '@types/yargs@17.0.32':
     resolution: {integrity: sha512-xQ67Yc/laOG5uMfX/093MRlGGCIBzZMarVa+gfNKJxWAIgykYpVGkBdbqEzGDDfCrVUj6Hiff4mTZ5BA6TmAog==}
+
+  '@worawat/flux@1.0.1':
+    resolution: {integrity: sha512-/70YrZlLOkfM42fzMRSQCJuGsDRBfkn/cEqa2IJvxIkm9KoIm6NbMWl4+CQ1BdQwGxD4JxlGs1J28gXvPQGT2w==}
 
   abbrev@2.0.0:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==}
@@ -3702,6 +3714,15 @@ snapshots:
 
   '@pulumi/query@0.3.0': {}
 
+  '@pulumi/tls@5.0.3(typescript@5.4.5)':
+    dependencies:
+      '@pulumi/pulumi': 3.115.2(typescript@5.4.5)
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+      - ts-node
+      - typescript
+
   '@sigstore/bundle@2.3.1':
     dependencies:
       '@sigstore/protobuf-specs': 0.3.2
@@ -4091,6 +4112,15 @@ snapshots:
   '@types/yargs@17.0.32':
     dependencies:
       '@types/yargs-parser': 21.0.3
+
+  '@worawat/flux@1.0.1(typescript@5.4.5)':
+    dependencies:
+      '@pulumi/pulumi': 3.115.2(typescript@5.4.5)
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+      - ts-node
+      - typescript
 
   abbrev@2.0.0: {}
 

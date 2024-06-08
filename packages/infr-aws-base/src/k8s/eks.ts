@@ -33,4 +33,4 @@ export const cluster = pulumi.output(callerArn).apply(
 )
 
 // Export the cluster's kubeconfig.
-export const kubeconfig = cluster.kubeconfig
+export const kubeconfig = pulumi.secret(cluster.kubeconfig)

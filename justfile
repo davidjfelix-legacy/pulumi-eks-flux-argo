@@ -16,12 +16,8 @@ deploy:
   mkdir -p out/.kube
   cp packages/infr-bootstrap/out/.ssh/id_rsa out/.ssh/id_rsa
   cp packages/infr-aws-base/out/.kube/config out/.kube/config
-  mkdir -p packages/infr-test-eks/out/.kube
-  cp out/.kube/config packages/infr-test-eks/out/.kube/config
-  just packages/infr-test-eks/deploy
 
 _cleanup:
-  just packages/infr-test-eks/undeploy
   just packages/infr-aws-base/undeploy main
 
 [confirm("!!!

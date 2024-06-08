@@ -11,7 +11,7 @@ clean:
 deploy stack="main" ci="": clean
   pulumi up --stack {{stack}} {{ci}}
   mkdir -p out/.kube
-  pulumi stack --stack {{stack}} output kubeconfig > out/.kube/config
+  pulumi stack --stack {{stack}} output kubeconfig --show-secrets > out/.kube/config
 
 # Pass CI specific args to deploy
 deploy-ci stack="main":

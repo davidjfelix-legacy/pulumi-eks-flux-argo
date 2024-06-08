@@ -1,5 +1,6 @@
 config:
   infr-aws-base:data:
+    bootstrapStackName: "DavidJFelix/infr-bootstrap/main"
     isLocal: false
     tags:
       Application: "infr-aws-base"
