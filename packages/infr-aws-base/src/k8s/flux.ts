@@ -1,3 +1,4 @@
+import * as kubernetes from '@pulumi/kubernetes'
 import * as flux from '@worawat/flux'
 import {fluxcdKey} from '../config'
 import {cluster} from './eks'
@@ -21,6 +22,9 @@ export const provider = new flux.Provider('flux', {
     },
   },
 })
+
+export const fluxSystemNamespace = new kubernetes.core.v1.Namespace('flux-system', {})
+export const argocdNamespace = new kubernetes.core.v1.Namespace('argocd', {})
 
 // export const resource = new flux.FluxBootstrapGit(
 //   'flux',

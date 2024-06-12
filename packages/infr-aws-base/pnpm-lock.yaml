@@ -17,6 +17,9 @@ importers:
       '@pulumi/eks':
         specifier: ^2.5.1
         version: 2.5.1(@types/node@18.19.33)(encoding@0.1.13)(typescript@5.4.5)
+      '@pulumi/kubernetes':
+        specifier: ^4.13.1
+        version: 4.13.1(encoding@0.1.13)(typescript@5.4.5)
       '@pulumi/pulumi':
         specifier: ^3.113.0
         version: 3.115.2(typescript@5.4.5)
@@ -629,8 +632,8 @@ packages:
   '@pulumi/eks@2.5.1':
     resolution: {integrity: sha512-7ROjCSk82pTEg/QUuukCFFhSYDwlfLak0asdiYVKzj435QVo6NHyfdQDWgvSPE+dxIrQqGjldsg+mflkwtHxYA==}
 
-  '@pulumi/kubernetes@4.12.0':
-    resolution: {integrity: sha512-P6a8jXYhr+YsyPFjUQaEh/6C0d6f7+TZv8/kiRHhLy2CDke9xAeuBXaHp/bw8EOOcLcibavPn97YKSt6YXeqDQ==}
+  '@pulumi/kubernetes@4.13.1':
+    resolution: {integrity: sha512-NDLVltcMKzfODZPH69SWUMJ2m4eHDp3VvTGLWbLY+U/3pk//ImM/dEWmla/HfvJMHDs7hxH98QTnPLsSHYqG+A==}
 
   '@pulumi/pulumi@3.115.2':
     resolution: {integrity: sha512-IgKk5UsBp7QfQetBcFKUvpkUfCz6JeiIjnD084uvEFML8okJPjzpTvHRkPGXlVvAIIj3q77UVlkB42NPI7vd+w==}
@@ -3640,7 +3643,7 @@ snapshots:
   '@pulumi/eks@2.5.1(@types/node@18.19.33)(encoding@0.1.13)(typescript@5.4.5)':
     dependencies:
       '@pulumi/aws': 6.34.1(typescript@5.4.5)
-      '@pulumi/kubernetes': 4.12.0(encoding@0.1.13)(typescript@5.4.5)
+      '@pulumi/kubernetes': 4.13.1(encoding@0.1.13)(typescript@5.4.5)
       '@pulumi/pulumi': 3.115.2(typescript@5.4.5)
       https-proxy-agent: 5.0.1
       jest: 29.7.0(@types/node@18.19.33)
@@ -3658,7 +3661,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@pulumi/kubernetes@4.12.0(encoding@0.1.13)(typescript@5.4.5)':
+  '@pulumi/kubernetes@4.13.1(encoding@0.1.13)(typescript@5.4.5)':
     dependencies:
       '@pulumi/pulumi': 3.115.2(typescript@5.4.5)
       '@types/node-fetch': 2.6.11

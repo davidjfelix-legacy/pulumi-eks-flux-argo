@@ -11,6 +11,7 @@
     "@pulumi/aws": "^6.0.0",
     "@pulumi/awsx": "^2.0.2",
     "@pulumi/eks": "^2.5.1",
+    "@pulumi/kubernetes": "^4.13.1",
     "@pulumi/pulumi": "^3.113.0",
     "@pulumi/tls": "^5.0.3",
     "@worawat/flux": "^1.0.1"
