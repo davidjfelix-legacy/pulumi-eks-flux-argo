@@ -22,12 +22,12 @@ export const provider = new flux.Provider('flux', {
   },
 })
 
-export const resource = new flux.FluxBootstrapGit(
-  'flux',
-  {
-    path: 'clusters/test-eks',
-  },
-  {
-    provider: provider,
-  },
-)
+// export const resource = new flux.FluxBootstrapGit(
+//   'flux',
+//   {
+//     path: 'clusters/test-eks',
+//   },
+//   {
+//     provider: provider,
+//   },
+// )

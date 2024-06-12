@@ -6,12 +6,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: ./clusters/test-eks/argocd
+  path: ./apps/argocd
   prune: true
   retryInterval: 2m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: argocd
   targetNamespace: default
   timeout: 3m0s
   wait: true
