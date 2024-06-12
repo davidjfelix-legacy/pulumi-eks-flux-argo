@@ -1,7 +1,17 @@
-apiVersion: kustomize.config.k8s.io/v1
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: argocd
-  namespace: argocd
-resources:
-- https://raw.githubusercontent.com/argoproj/argo-cd/v2.7.2/manifests/install.yaml
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./clusters/test-eks/argocd
+  prune: true
+  retryInterval: 2m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  targetNamespace: default
+  timeout: 3m0s
+  wait: true
