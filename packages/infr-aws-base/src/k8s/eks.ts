@@ -1,4 +1,5 @@
 import * as eks from '@pulumi/eks'
+import * as kubernetes from '@pulumi/kubernetes'
 import * as pulumi from '@pulumi/pulumi'
 import {mainClusterAdminRole} from '../auth/iam/k8s'
 import {callerArn, tags} from '../config'
@@ -31,6 +32,11 @@ export const cluster = pulumi.output(callerArn).apply(
       tags,
     }),
 )
+
+const provider = new kubernetes.Provider('eks-provider', {kubeconfig: cluster.kubeconfigJson})
+
+export const fluxSystemNamespace = new kubernetes.core.v1.Namespace('flux-system', {}, {provider})
+export const argocdNamespace = new kubernetes.core.v1.Namespace('argocd', {}, {provider})
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = pulumi.secret(cluster.kubeconfig)
